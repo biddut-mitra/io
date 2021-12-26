@@ -1,0 +1,93 @@
+client
+pull
+dev tun
+proto tcp
+remote ip.ip.ip.ip 943
+resolv-retry infinite
+nobind
+persist-key
+persist-tun
+cipher AES-256-GCM
+;cipher AES-256-CBC
+auth-user-pass
+auth SHA512
+key-direction 1
+verb 7
+tun-mtu 1450
+mssfix 1450
+<tls-auth>
+#
+# 2048 bit OpenVPN static key
+#
+-----BEGIN OpenVPN Static key V1-----
+8b4711ba65f0999d6a41804b250e1dc4
+................................
+822fcdae8482c97d50cd69a2f5f03c74
+af8c737cda566a8ce1d48bae245ad45f
+-----END OpenVPN Static key V1-----
+</tls-auth>
+<ca>
+-----BEGIN CERTIFICATE-----
+MIIDSzCCAjOgAwIBAgIUN8mdPXmXYC+Rc3ZvuTh5xvRENeswDQYJKoZIhvcNAQEL
+................................................................
+LDX8R8OU7/a0RddyvBlEVqEwfizyqapp3uq8tYEValhvDCtGGZ/BB/+guYusTu2A
+VEu3Wq84/yIklDQCmwkQ77nKv+hxDqsONqid4ebuFw==
+-----END CERTIFICATE-----
+</ca>
+<cert>
+
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            ........................................
+        Signature Algorithm: sha256WithRSAEncryption
+        Issuer: CN=Easy-RSA CA
+        Validity
+            Not Before: Dec 23 22:27:17 2021 GMT
+            Not After : Dec 21 22:27:17 2031 GMT
+        Subject: CN=client
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                RSA Public-Key: (2048 bit)
+                Modulus:
+                    00:be:f0:19:82:5d:43:6c:96:d7:e9:2b:73:2b:b7:
+                    ............................................:
+                    09:df:b5:18:fd:07:f7:17:37:cb:dd:94:c6:ce:89:
+                    36:89
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            X509v3 Subject Key Identifier: 
+                75:15:43:70:90:79:7F:8A:B5:C8:7D:8D:BF:FD:C2:2A:65:5C:68:C4
+            X509v3 Authority Key Identifier: 
+                keyid:33:61:00:3C:D7:51:F2:7A:43:1A:F5:88:5F:B4:12:A4:5C:4A:41:63
+                DirName:/CN=Easy-RSA CA
+                serial:37:C9:9D:3D:79:97:60:2F:91:73:76:6F:B9:38:79:C6:F4:44:35:EB
+
+            X509v3 Extended Key Usage: 
+                TLS Web Client Authentication
+            X509v3 Key Usage: 
+                Digital Signature
+    Signature Algorithm: sha256WithRSAEncryption
+         01:bb:03:12:cf:58:c8:00:ee:fd:a8:4d:a6:9b:92:22:65:2c:
+         .....................................................:
+         b0:65:26:7f:f1:21:85:02:15:43:f9:c3:25:95:a1:58:b2:eb:
+         27:b8:1c:4f
+-----BEGIN CERTIFICATE-----
+MIIDVDCCAjygAwIBAgIQZhf0QNyPQ8U/UBR/CoxPszANBgkqhkiG9w0BAQsFADAW
+................................................................
+LX06PeHjwPwPUE80EDvqpfBqhPTkzK180P9aYHDr2NqtwkkHeG3znzwA4ypNlXBc
++F9j/zFjNLsiuf0VMlJMA0jnsGUmf/EhhQIVQ/nDJZWhWLLrJ7gcTw==
+-----END CERTIFICATE-----
+</cert>
+<key>
+
+-----BEGIN PRIVATE KEY-----
+MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC+8BmCXUNsltfp
+................................................................
+KTe68mhQNLOXjsXFkUrpu5IM2uFAhluuKTSei4fucdI/tailDS+SXloir219Sh+d
+Y3Vwm443Sr5zb4H1TuBDIcNV
+-----END PRIVATE KEY-----
+</key>
